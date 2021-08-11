@@ -3,6 +3,8 @@
 #include "Shape(Adaptee).h"
 
 #include "ShapeToText(Adapter).h"
+
+#include "ShapeToText(ObjectAdapter).h"
 using namespace std;
 
 int main()
@@ -20,9 +22,13 @@ int main()
 	void* manipulatorObject = shapeAdapter->CreateManipulator(); //using this we can perfrom some operation on set of Shape objects.
 	//doMove(manipulatorObject)
 
+	//Operation on shape without Help of TextView
 	Shape s;
 	s.BoundingBox(bottomLeft,bottomRight);
 
+	//Object Adapter
+	ShapeToTextObjectAdapter *shapeAdapter2 = new ShapeToTextObjectAdapter(new TextView());
+	shapeAdapter2->BoundingBox(bottomLeft, bottomRight); //get Drawing reason	
 
 	return 0;
 }
