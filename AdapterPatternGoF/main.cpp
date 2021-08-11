@@ -20,5 +20,9 @@ int main()
 	void* manipulatorObject = shapeAdapter->CreateManipulator(); //using this we can perfrom some operation on set of Shape objects.
 	//doMove(manipulatorObject)
 
+	Shape s;
+	s.BoundingBox(bottomLeft,bottomRight);
+
+
 	return 0;
 }

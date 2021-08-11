@@ -17,6 +17,7 @@ public:
 
 void ShapeToTextClassAdapter::BoundingBox(Point& bottomLeft, Point& topRight) const
 {
+	cout << "Do Operation via ShapeToTextAdapter!\n";
 	Coord bottom, left, width, height;
 
 	getOrigin(bottom, left); 
