@@ -5,9 +5,14 @@ using namespace std;
 
 int main()
 {
-	//ClockTimerSubject* timer = new ClockTimerSubject();
-	//DigitalClock* digitalClock = new DigitalClock(timer);
+	ClockTimerSubject* timer = new ClockTimerSubject();
+	DigitalClock* digitalClock = new DigitalClock(timer);
 
+	cout << "Tick()\n";
+	timer->tick();
+
+	cout << "ticking again\n";
+	timer->tick();
 
 
 

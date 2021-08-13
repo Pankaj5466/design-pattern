@@ -22,6 +22,9 @@ private:
 DigitalClock::DigitalClock(ClockTimerSubject*s)
 {
 	this->subjectObj = s;
+
+	//Subscribe to Subject
+	subjectObj->attach(this);
 }
 
 inline void DigitalClock::update(Subject* s)
@@ -31,7 +34,7 @@ inline void DigitalClock::update(Subject* s)
 		//via polyMorphism base type point can point to derived type object
 	{
 		cout << "System Notified that Clock time has been updated to: \n";
-		cout << subjectObj->getHour() << " " << subjectObj->getMin() << endl;
+		cout << subjectObj->getHour() << " " << subjectObj->getMin() << " "<<subjectObj->getSec()<<endl;
 	}
 
 }

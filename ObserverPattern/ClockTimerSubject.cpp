@@ -1,9 +1,12 @@
 #include "ClockTimerSubject.h"
+#include<iostream>
+using namespace std;
 
-
+static int t = 0;
 void ClockTimerSubject::tick()
 {
 	//update interal time-keeping state
+	cout << "System Notificed about time change\n";
 	hr = getHour();
 	min = getMin();
 	sec = getSec();
@@ -15,17 +18,27 @@ void ClockTimerSubject::tick()
 inline int ClockTimerSubject::getHour()
 {
 	//Query the system about current status
-	return 0;
+	return t++;
 }
 
 inline int ClockTimerSubject::getMin()
 {
 	//Query the system about current status
-	return 0;
+	return t++;
 }
 
 inline int ClockTimerSubject::getSec()
 {
 	//Query the system about current status
-	return 0;
+	return t++;
+}
+
+ClockTimerSubject::ClockTimerSubject()
+{
+
+}
+
+ClockTimerSubject::~ClockTimerSubject()
+{
+
 }

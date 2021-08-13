@@ -8,6 +8,7 @@ class ClockTimerSubject :public Subject
 {
 public:
 	ClockTimerSubject();
+	~ClockTimerSubject();
 	int getHour(); //Virtual can be omitted
 	int getMin();
 	int getSec();

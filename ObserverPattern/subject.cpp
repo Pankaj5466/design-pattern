@@ -18,3 +18,13 @@ inline void Subject::notify()
 
 	}
 }
+
+Subject::~Subject()
+{
+
+}
+
+Subject::Subject()
+{
+
+}
