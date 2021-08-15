@@ -5,6 +5,10 @@
 
 #include "State.h"
 
+class NoQuarterState;
+class HasQuarterState;
+class SoldState;
+class SoldOutSate;
 
 class NoQuarterState :public State
 {
