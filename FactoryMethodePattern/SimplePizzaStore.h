@@ -1,5 +1,6 @@
 #include "SimplePizzzaFactory.h"
 
+
 class PizzaStore
 {
 	SimplePizzaFactory* factory;
@@ -12,12 +13,10 @@ public:
 
 		p = factory->createPizza(type);
 
-#if 0
 		p->prepare();
 		p->bake();
 		p->cut();
 		p->box();
-#endif
 
 		return p; //Pizza is ready to be served OR sent via Delivery!
 	}
