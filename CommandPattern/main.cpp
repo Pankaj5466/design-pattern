@@ -40,6 +40,5 @@ int main()
 
 	vec[vec.size() - 1]->Execute();
 
-
 	return 0;
 }
