@@ -18,12 +18,6 @@ inline void Command::undo()
 	cout << "Undo Command NOT supported\n";
 }
 
-Command::~Command()
-{
+Command::~Command(){}
 
-}
-
-Command::Command()
-{
-
-}
+Command::Command(){}

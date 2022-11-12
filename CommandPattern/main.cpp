@@ -9,19 +9,24 @@
 
 using namespace std;
 
-int main()
+int main() //This is client from our diagram. 
+//Client task is to create Concrete command & Assign them to Invokers
 {
 	cout << "Main Program Handling CommansPattern Tutorial\n\n";
 
 	vector<Command*> vec; //Remote OR Invoker OR Seperate Class 
 
-	notepad* nInstance = nullptr;
-	vec.push_back(new OpenCommand(nInstance));
 
-	Document* doc = nullptr;
+	notepad* nInstance = nullptr; //This is the receiver (Which knows how to perform the task)
+	vec.push_back(new OpenCommand(nInstance)); //Create a concreteCommand & Assign to RemoteInvoker
+
+	Document* doc = nullptr; //Single application can have multiple receiver.
+	//A receiver is just a class/function which knows how to performa a task.
+	//In our application, notepad clas know how to open & document class knows how to past. (and so many such classes)
+	//They together form the complete application
 	vec.push_back(new PasteCommand(doc));
 
-	vec[1]->Execute();
+	vec[1]->Execute(); //Execute the common stored in that RemoteSlot
 	vec[1]->Execute();
 
 	vec[1]->undo();
